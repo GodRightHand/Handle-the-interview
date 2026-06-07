@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隐私政策 - 球宝AI</title>
+  <style>
+    :root {
+      --bg: #f5f6fa;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --sub: #555555;
+      --muted: #888888;
+      --accent: #e8353e;
+      --border: #e8e8e8;
+      --table-head-bg: #fafafa;
+      --shadow: 0 2px 16px rgba(0,0,0,0.07);
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121212;
+        --card: #1e1e1e;
+        --text: #f0f0f0;
+        --sub: #aaaaaa;
+        --muted: #777777;
+        --accent: #ff5a5f;
+        --border: #2e2e2e;
+        --table-head-bg: #252525;
+        --shadow: 0 2px 16px rgba(0,0,0,0.4);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue",
+                   "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--accent);
+      padding: 40px 24px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .header-icon {
+      font-size: 42px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+
+    .header .subtitle {
+      margin-top: 6px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 28px 16px 60px;
+    }
+
+    /* ── Update Badge ── */
+    .update-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .update-badge::before {
+      content: '🕐';
+      font-size: 14px;
+    }
+
+    /* ── Intro Card ── */
+    .intro-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin-bottom: 16px;
+      border-left: 4px solid var(--accent);
+      box-shadow: var(--shadow);
+      font-size: 14.5px;
+      color: var(--sub);
+      line-height: 1.85;
+    }
+
+    .intro-card strong {
+      color: var(--text);
+    }
+
+    /* ── Section Cards ── */
+    .section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px 22px 18px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-icon {
+      font-size: 20px;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(232, 53, 62, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* ── Sub Sections ── */
+    .sub-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 14px 0 8px;
+    }
+
+    .sub-title:first-of-type {
+      margin-top: 4px;
+    }
+
+    /* ── Paragraph ── */
+    p {
+      font-size: 14.5px;
+      color: var(--sub);
+      line-height: 1.85;
+      margin-bottom: 10px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ── Lists ── */
+    ul, ol {
+      padding-left: 18px;
+      margin-bottom: 10px;
+    }
+
+    li {
+      font-size: 14.5px;
+      color: var(--sub);
+      line-height: 1.85;
+      margin-bottom: 6px;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+
+    li strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ── Highlight Block ── */
+    .highlight-block {
+      background: rgba(232, 53, 62, 0.06);
+      border: 1px solid rgba(232, 53, 62, 0.18);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      font-size: 14px;
+      color: var(--sub);
+      line-height: 1.8;
+    }
+
+    .highlight-block strong {
+      color: var(--accent);
+    }
+
+    /* ── Table ── */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+
+    thead {
+      background: var(--table-head-bg);
+    }
+
+    th, td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    td {
+      color: var(--sub);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ── Contact Card ── */
+    .contact-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .contact-item:first-child {
+      padding-top: 0;
+    }
+
+    .contact-item-icon {
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item-label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .contact-item-value {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .contact-item-value a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .response-note {
+      margin-top: 12px;
+      padding: 10px 14px;
+      background: var(--bg);
+      border-radius: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 20px 16px 10px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .header {
+        padding: 32px 20px 26px;
+      }
+
+      .header h1 {
+        font-size: 20px;
+      }
+
+      .container {
+        padding: 20px 12px 50px;
+      }
+
+      .section {
+        padding: 18px 16px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <span class="header-icon">🛡️</span>
+    <h1>隐私政策</h1>
+    <div class="subtitle">球宝AI · 用户隐私保护声明</div>
+  </div>
+
+  <div class="container">
+
+    <!-- Update Date -->
+    <div class="update-badge">更新日期：2026 年 6 月</div>
+
+    <!-- Intro -->
+    <div class="intro-card">
+      球宝（以下简称"我们"）深知个人信息对您的重要性，我们将按照法律法规要求，采取相应安全保护措施，尽力保护您的个人信息安全可控。请您在使用球宝服务前，仔细阅读并充分理解本隐私政策。<strong>您使用或继续使用球宝服务，即表示您同意我们按照本隐私政策收集、使用、存储和共享您的相关信息。</strong>
+    </div>
+
+    <!-- 一、我们收集的信息 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">📋</div>
+        <div class="section-title">一、我们收集的信息</div>
+      </div>
+
+      <div class="sub-title">1.1 您主动提供的信息</div>
+      <ul>
+        <li><strong>账号信息</strong>：注册时提供的手机号码、昵称、头像等；</li>
+        <li><strong>反馈信息</strong>：您通过意见反馈功能提交的文字内容。</li>
+      </ul>
+
+      <div class="sub-title">1.2 您使用服务时产生的信息</div>
+      <ul>
+        <li><strong>日志信息</strong>：访问时间、操作记录、设备标识符等；</li>
+        <li><strong>交易记录</strong>：球宝虚拟货币充值、消费流水记录；</li>
+        <li><strong>使用行为</strong>：浏览的赛事、查看的专家方案、AI 问答记录等，用于优化服务体验。</li>
+      </ul>
+
+      <div class="sub-title">1.3 设备信息</div>
+      <ul>
+        <li><strong>设备基础信息</strong>：设备型号、操作系统版本、应用版本号；</li>
+        <li><strong>网络信息</strong>：网络类型（Wi-Fi / 蜂窝）、运营商信息。</li>
+      </ul>
+    </div>
+
+    <!-- 二、我们如何使用信息 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🔧</div>
+        <div class="section-title">二、我们如何使用信息</div>
+      </div>
+      <p>我们收集的信息将用于以下目的：</p>
+      <ul>
+        <li><strong>2.1</strong> 提供、维护和改善球宝的核心服务，包括赛事数据展示、AI 智能问答、专家方案购买、签到积分等；</li>
+        <li><strong>2.2</strong> 验证您的身份，保障账号安全；</li>
+        <li><strong>2.3</strong> 处理充值、消费等交易事务；</li>
+        <li><strong>2.4</strong> 通过应用内消息向您发送重要的服务通知；</li>
+        <li><strong>2.5</strong> 进行数据统计与分析，优化产品体验；</li>
+        <li><strong>2.6</strong> 依法配合监管机构的合规要求。</li>
+      </ul>
+      <div class="highlight-block">
+        <strong>我们不会将您的个人信息用于本政策约定以外的目的，如需超出约定范围使用，将再次征得您的明确同意。</strong>
+      </div>
+    </div>
+
+    <!-- 三、信息共享与披露 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🤝</div>
+        <div class="section-title">三、信息共享与披露</div>
+      </div>
+      <p><strong>3.1 我们不会向无关第三方出售您的个人信息。</strong></p>
+      <p><strong>3.2</strong> 在以下情况下，我们可能与第三方共享您的信息：</p>
+      <ul>
+        <li><strong>服务提供商</strong>：为完成服务所必要的合作方（如云服务提供商、短信服务商、支付服务商），这些合作方仅可在提供服务必要范围内使用您的信息；</li>
+        <li><strong>法律要求</strong>：依法配合司法机关、监管机构依法调取信息；</li>
+        <li><strong>保护权益</strong>：为保护球宝、用户或公众的合法权益，防范欺诈、安全威胁等。</li>
+      </ul>
+      <p><strong>3.3</strong> 如发生合并、收购或资产转让，我们将确保接收方按照不低于本政策的标准保护您的个人信息。</p>
+    </div>
+
+    <!-- 四、信息存储与安全 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🔒</div>
+        <div class="section-title">四、信息存储与安全</div>
+      </div>
+      <p><strong>4.1</strong> 您的个人信息将存储在中华人民共和国境内的服务器上。</p>
+      <p><strong>4.2</strong> 我们采取以下措施保障您的信息安全：</p>
+      <ul>
+        <li>数据传输采用 HTTPS 加密；</li>
+        <li>敏感数据（如手机号）在存储时进行加密处理；</li>
+        <li>严格的内部权限管理，限制人员访问用户数据；</li>
+        <li>定期进行安全漏洞扫描和应急演练。</li>
+      </ul>
+      <p><strong>4.3</strong> 尽管我们已采取上述合理安全措施，但互联网并非绝对安全的环境。<strong>如发生个人信息安全事件，我们将及时告知您并报告相关监管机构。</strong></p>
+      <p><strong>4.4</strong> 我们将您的个人信息保存至您注销账号后的 <strong>3 年</strong>内（法律法规另有规定的除外），超期后将予以删除或匿名化处理。</p>
+    </div>
+
+    <!-- 五、您的权利 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">⚖️</div>
+        <div class="section-title">五、您的权利</div>
+      </div>
+      <p>在适用法律允许的范围内，您对自己的个人信息享有以下权利：</p>
+      <ul>
+        <li><strong>5.1 访问与更正</strong>：您可以在"我的 → 编辑资料"中查看和修改您的账号信息；</li>
+        <li>
+          <strong>5.2 删除</strong>：您可以向我们申请删除您的个人信息，但以下情况除外：
+          <ul>
+            <li>法律法规要求保留的；</li>
+            <li>涉及未完成的交易订单；</li>
+            <li>为维护平台安全所必要的。</li>
+          </ul>
+        </li>
+        <li><strong>5.3 注销账号</strong>：您可通过"我的"页面中的账号安全功能申请注销账号。注销后，您的账号数据将被删除或匿名化，<strong>账号内剩余球宝虚拟货币将无法找回</strong>；</li>
+        <li><strong>5.4 撤回同意</strong>：您可随时通过注销账号或联系客服撤回对信息处理的同意；</li>
+        <li><strong>5.5 获取副本</strong>：如需获取您的个人信息副本，可通过意见反馈功能联系我们提出申请。</li>
+      </ul>
+    </div>
+
+    <!-- 六、未成年人保护 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">👶</div>
+        <div class="section-title">六、未成年人保护</div>
+      </div>
+      <p><strong>6.1</strong> 球宝不面向 <strong>14 周岁以下</strong>未成年人提供服务。若您是 14 周岁以下未成年人，请勿注册或使用球宝服务。</p>
+      <p><strong>6.2</strong> 如您是 14 至 18 周岁的未成年人，请在监护人同意并陪同下阅读本政策，并在监护人指导下使用球宝服务。</p>
+      <p><strong>6.3</strong> 若我们发现在未获监护人同意的情况下收集了未成年人的个人信息，我们将尽快删除相关数据。</p>
+    </div>
+
+    <!-- 七、AI 大模型服务说明 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🤖</div>
+        <div class="section-title">七、AI 大模型服务说明</div>
+      </div>
+      <p><strong>7.1</strong> 球宝的智能问答功能由<strong>字节跳动豆包AI大模型</strong>提供技术支持。当您使用"问球宝"AI 对话功能时，您输入的问题内容将被发送至豆包AI大模型进行处理并生成回复。</p>
+      <p><strong>7.2</strong> 我们仅将您的对话内容用于生成即时回复，<strong>不会将您的对话内容用于模型训练</strong>。</p>
+      <p><strong>7.3</strong> 豆包AI大模型的数据处理遵循《字节跳动隐私政策》及相关法律法规要求。如需了解更多信息，请参阅字节跳动官方隐私政策。</p>
+      <p><strong>7.4</strong> 您可以随时选择不使用 AI 问答功能，这不会影响您使用球宝的其他服务。</p>
+    </div>
+
+    <!-- 八、第三方 SDK 说明 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🧩</div>
+        <div class="section-title">八、第三方 SDK 说明</div>
+      </div>
+      <p>球宝集成了以下第三方 SDK，可能会收集您的部分信息：</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>SDK 名称</th>
+              <th>用途</th>
+              <th>收集信息</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>苹果 StoreKit</td>
+              <td>App 内购支付</td>
+              <td>交易凭证</td>
+            </tr>
+            <tr>
+              <td>腾讯云 CloudBase</td>
+              <td>数据存储和服务</td>
+              <td>请求日志</td>
+            </tr>
+            <tr>
+              <td>豆包AI大模型（字节跳动）</td>
+              <td>AI 智能问答</td>
+              <td>用户输入的对话内容</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 10px; font-size: 13.5px;">上述第三方 SDK 及服务的数据处理行为受其各自隐私政策约束。</p>
+    </div>
+
+    <!-- 九、隐私政策更新 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">📢</div>
+        <div class="section-title">九、隐私政策更新</div>
+      </div>
+      <p><strong>9.1</strong> 我们可能会不定期更新本隐私政策，更新后将在应用内发布公告。</p>
+      <p><strong>9.2</strong> 对于重大变更（如新增收集信息类型、信息使用目的变化等），我们将通过应用内弹窗等显著方式通知您，并再次征得您的同意。</p>
+    </div>
+
+    <!-- 十、联系我们 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">💬</div>
+        <div class="section-title">十、联系我们</div>
+      </div>
+      <p>如您对本隐私政策有任何疑问、意见或建议，可通过以下方式联系我们：</p>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-item">
+        <div class="contact-item-icon">✉️</div>
+        <div>
+          <div class="contact-item-label">客服邮箱</div>
+          <div class="contact-item-value">
+            <a href="mailto:nemofish333@163.com">nemofish333@163.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📱</div>
+        <div>
+          <div class="contact-item-label">应用内反馈</div>
+          <div class="contact-item-value">我的 → 反馈</div>
+        </div>
+      </div>
+      <div class="response-note">⏱ 我们将在收到您的反馈后 <strong>15 个工作日</strong>内予以回复。</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      © 2026 球宝AI · 保留所有权利
+    </div>
+
+  </div>
+
+</body>
+</html>
